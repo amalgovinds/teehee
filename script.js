@@ -3,7 +3,7 @@ const targetBtn = document.getElementById("yes");
 const txt = document.getElementById("valz");
 
   // Set initial size
-let size = 16;
+let size = 30;
 
 // Event listener to increase size
 increaseBtn.addEventListener("click", function () {
@@ -11,15 +11,16 @@ increaseBtn.addEventListener("click", function () {
     targetBtn.style.fontSize = size + "px";
     targetBtn.style.padding = (size / 3) + "px"; // Adjust padding proportionally
     // Add text
-    txt.innerHTML += "valz";
+    txt.innerHTML += "Valz";
 });
 
 targetBtn.addEventListener("click", function(){
     document.body.innerHTML = `
     <div class="center">
         <img src="source.gif" style="width:480px;height:270px;" />
-        <h1>LEsssgOOOO</h1>
+        <h1>LEESSSGGGGOOOOO</h1>
         <img src="bite.webp" />
+        <h2>TeeHee</h2>
     </div>
     `; 
 });
