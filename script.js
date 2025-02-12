@@ -15,5 +15,11 @@ increaseBtn.addEventListener("click", function () {
 });
 
 targetBtn.addEventListener("click", function(){
-    document.body.innerHTML = '<h1>LEsssgOOOO</h1>'; 
+    document.body.innerHTML = `
+    <div class="center">
+        <img src="source.gif" style="width:480px;height:270px;" />
+        <h1>LEsssgOOOO</h1>
+        <img src="bite.webp" />
+    </div>
+    `; 
 });
