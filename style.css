@@ -6,6 +6,7 @@ h1{
 }
 h2{
     color: red;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: 400;
     font-style: normal;
 }
@@ -36,14 +37,14 @@ button:active {
     box-shadow: 0px 2px 8px rgba(255, 100, 140, 0.3);
 }
 
-body {
+/* body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    height: 100vh; /* Full viewport height 
     margin: 0;
     background-color: #F8E8EE;
-}
+} */
 
 .center {
     background: #FDCEDF;
@@ -51,4 +52,49 @@ body {
     text-align: center;
     border-radius: 10px;
     font-size: 20px;
+}
+body {
+    margin: 0;
+    background-color: #F8E8EE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.heart-container {
+    position: relative;
+    background: rgba(255, 0, 100, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.heart {
+    position: absolute;
+    bottom: 0;
+    background-color: red;
+    transform: rotate(-45deg);
+    animation: floatHearts linear infinite;
+}
+
+/* Properly aligned heart */
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+}
+
+@keyframes floatHearts {
+    0% {
+        transform: translateY(0) rotate(-45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(-45deg);
+        opacity: 0;
+    }
 }
